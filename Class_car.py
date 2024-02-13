@@ -25,3 +25,20 @@ class Car:
 first_car = Car(2010, "Red", 1000, "Audi", "Небита", 150, 10)
 first_car.print_info()
 first_car.drag()
+
+
+
+class Dog:
+    @staticmethod
+    def calculate_god_year(age):
+        return age * 7
+
+dog_age = int(input("Введите возраст собаки: "))
+human_age = Dog.calculate_god_year(dog_age)
+print(f"Возраст собаки в человеческих годах: {human_age}")
+
+
+
+
+
+
