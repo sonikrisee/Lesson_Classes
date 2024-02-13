@@ -33,9 +33,41 @@ class Dog:
     def calculate_god_year(age):
         return age * 7
 
-dog_age = int(input("Введите возраст собаки: "))
-human_age = Dog.calculate_god_year(dog_age)
-print(f"Возраст собаки в человеческих годах: {human_age}")
+# dog_age = int(input("Введите возраст собаки: "))
+# human_age = Dog.calculate_god_year(dog_age)
+# print(f"Возраст собаки в человеческих годах: {human_age}")
+
+
+
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return f"Значение равно: {self.value}"
+
+obj = MyClass(40)
+print(str(obj))
+
+
+class PowTwo:
+    def __init__(self, max = 0):
+        self.max = max
+
+    def __iter__(self):
+        self.n = 0
+        return self
+
+    def __next__(self):
+        if self.n <= self.max:
+            result = 2 ** self.n
+            self.n += 1
+            return result
+        else:
+            raise StopIteration
+for i in PowTwo(3):
+    print(i)
+
 
 
 
