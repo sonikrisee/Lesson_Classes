@@ -14,7 +14,7 @@ class Car:
         self.rate = rate
 
     def drag(self):
-            speed = float(random.uniform(3.0, 4.0))
+            speed = round(random.uniform(3.0, 4.0), 2)
             print(f"Разгон до 100 км/ч за {speed} секунд")
             print(f"Расход на 100 км: {self.rate} литров")
 
